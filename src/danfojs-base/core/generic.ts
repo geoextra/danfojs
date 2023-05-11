@@ -145,7 +145,7 @@ export default class NDframe implements NDframeInterface {
                 _columnNames = Object.keys((data)[0]);
             }
 
-            this.loadArrayIntoNdframe({ data: _data, index, columns: _columnNames, dtypes });
+            this.loadArrayIntoNdframe({ data : <ArrayType2D>_data, index, columns: _columnNames, dtypes });
 
         } else {
             const [_data, _colNames] = utils.getRowAndColValues(data);

@@ -715,7 +715,7 @@ export default class Series extends NDframe implements SeriesInterface {
     */
     std(): number {
         const values = this.$checkAndCleanValues(this.values as ArrayType1D, "max")
-        return std(values);
+        return std(...values);
     }
 
     /**
@@ -729,7 +729,7 @@ export default class Series extends NDframe implements SeriesInterface {
     */
     var(): number {
         const values = this.$checkAndCleanValues(this.values as ArrayType1D, "max")
-        return variance(values);
+        return variance(...values);
     }
 
     /**
